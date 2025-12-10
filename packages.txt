@@ -1,5 +1,2 @@
-# System packages yang dibutuhkan oleh Streamlit Cloud
-# File ini akan diinstall oleh apt-get
-
 python3-dev
 build-essential
