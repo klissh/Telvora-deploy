@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: telvora
+    env: python
+    plan: free
+    
+    # Build configuration
+    buildCommand: |
+      pip install --upgrade pip &&
+      pip install -r src/services/recsys_agentic/requirements.txt &&
+      pip install streamlit plotly requests
+    
+    # Start command - run Streamlit
+    startCommand: >
+      streamlit run streamlit_app.py 
+      --server.port=$PORT 
+      --server.address=0.0.0.0 
+      --server.headless=true
+    
+    # Environment variables
+    envVars:
+      - key: VITE_SUPABASE_URL
+        scope: all
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        scope: all
+        sync: false
+      - key: GEMINI_API_KEY
+        scope: all
+        sync: false
+      - key: BACKEND_URL
+        value: http://localhost:8000
+        scope: all
+        sync: false
+      - key: OLLAMA_MODEL
+        value: ""
+        scope: all
+        sync: false
+      - key: OLLAMA_BASE_URL
+        value: http://localhost:11434
+        scope: all
+        sync: false
+    
+    # Disable auto-deploy to save resources (free tier)
+    autoDeploy: true
+    
+    # Increase timeout for initial build
+    buildOpenStdin: false
