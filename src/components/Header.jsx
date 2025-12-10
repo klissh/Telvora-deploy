@@ -13,12 +13,9 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800/30 bg-white dark:bg-slate-950 backdrop-blur-xl">
       <nav className="container flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 shadow-md shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all group-hover:scale-105">
-            <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 50C25 20 45 80 60 50C70 30 75 50 80 50" stroke="white" strokeWidth="8" strokeLinecap="round"/>
-              <circle cx="85" cy="50" r="10" stroke="white" strokeWidth="8" />
-            </svg>
-          </div> 
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 border border-slate-200 dark:border-slate-800 shadow-md shadow-black/10 overflow-hidden">
+            <img src="/logo.png" alt="Telvora logo" className="h-8 w-8 object-contain" loading="lazy" />
+          </div>
           <span className="text-xl font-bold text-white">
             <span className="text-slate-900 dark:text-white">Telvora</span>
           </span>

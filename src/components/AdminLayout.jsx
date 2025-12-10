@@ -72,11 +72,8 @@ const AdminLayout = () => {
         <div className="flex h-full flex-col">
           {/* Logo/Brand */}
           <div className="flex items-center gap-3 border-b border-slate-800 p-4 h-16 flex-shrink-0">
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/20">
-              <svg width="20" height="20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 50C25 20 45 80 60 50C70 30 75 50 80 50" stroke="white" strokeWidth="8" strokeLinecap="round"/>
-                <circle cx="85" cy="50" r="10" stroke="white" strokeWidth="8" />
-              </svg>
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 border border-slate-800 text-white shadow-lg shadow-black/10 overflow-hidden">
+              <img src="/logo.png" alt="Telvora logo" className="h-8 w-8 object-contain" loading="lazy" />
             </div>
             <div className="flex flex-col">
               <div className="text-sm font-bold text-white leading-tight">Telvora</div>
