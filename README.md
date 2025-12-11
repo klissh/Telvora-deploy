@@ -44,6 +44,9 @@ npm install
 ### Step 3: Setup Backend
 
 ```bash
+#Mengubah versi Python menjadi 3.10
+py -3.10 --version
+
 # Buat virtual environment
 python -m venv .venv
 
